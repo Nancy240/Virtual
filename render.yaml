@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: your-service-name
+    env: python
+    region: oregon  # Choose the region that suits you best
+    plan: free  # Choose your plan, e.g., free, standard, etc.
+    buildCommand: |
+      apt-get update && apt-get install -y portaudio19-dev
+      pip install -r requirements.txt
+    startCommand: gunicorn your_app:app  # Replace with your actual start command
+    envVars:
+      - key: FLASK_ENV
+        value: production  # or development, depending on your environment
