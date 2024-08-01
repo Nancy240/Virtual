@@ -1,7 +1,7 @@
 version: 1
 services:
   - type: web
-    name: your-service-name
+    name: Virtual
     env: python
     buildCommand: |
       apt-get update && apt-get install -y portaudio19-dev
