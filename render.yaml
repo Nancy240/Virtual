@@ -6,6 +6,6 @@ services:
     buildCommand: |
       apt-get update && apt-get install -y portaudio19-dev
       pip install -r requirements.txt
-    startCommand: python your_script.py
+    startCommand: python message.py
     ports:
       - 80
